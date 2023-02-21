@@ -13,10 +13,6 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <h2>РАХІВНИЦЯ</h2>
-      <Counter initialValue={100}>
-        
-      </Counter>
     </div>
   );
 };
