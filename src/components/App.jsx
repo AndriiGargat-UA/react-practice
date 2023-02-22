@@ -1,4 +1,4 @@
-import { Counter } from './Counter/Counter';
+import { DropDown } from "./DropDown/DropDown";
 
 export const App = () => {
   return (
@@ -13,6 +13,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
+      <DropDown/>
     </div>
-  );
+  ); 
 };
