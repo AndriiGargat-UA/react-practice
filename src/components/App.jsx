@@ -1,17 +1,14 @@
 import { Component } from 'react';
-
+import { Form } from './Form';
 
 export class App extends Component {
   state = {
-    inputValue: '',
-    name: '',
-    surname: ''
+    // todos: initialTodos,
   };
 
-  handleChange = event => { 
-    const { name, value } = event.currentTarget;
-    this.setState({[name]: value})
-  };
+  formSubmitHandler = data => {
+    console.log(data)
+   };
 
   render() {
     return (
@@ -23,7 +20,7 @@ export class App extends Component {
           justifyContent: 'center',
           alignItems: 'center',
           fontSize: 40,
-          color: '#690808',
+          color: '#12b4ca',
         }}
       >
         {/* <input
@@ -31,29 +28,7 @@ export class App extends Component {
           value={this.state.inputValue}
           onChange={this.handleInput}
         /> */}
-
-        <form style={{         
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
-          <label htmlFor="">
-            Name <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label htmlFor="">
-            Surname <input
-              type="text"
-              name="surname"
-              value={this.state.surname}
-              onChange={this.handleChange}
-            />
-          </label>
-        </form>
-
+        <Form onSubmit={ this.formSubmitHandler} />
       </div>
     );
   }
